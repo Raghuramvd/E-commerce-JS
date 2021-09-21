@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        header{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(72, 118, 185);
+    font-size: 30px;
+}
+    </style>
+</head>
+<body>
+
+    <main>
+        <div class="background">
+            <div class="text">
+                <h1><img src="riders.png" height="100" width="100">Login</h1>  
+            </div>
+            <div class="box">
+                <form class="form">
+                    <input type="text" class="username" name="userid" placeholder="Username" required>
+                    <input type="password" class="password" placeholder="Password"  name="pswrd" required>
+                    <input type="button" class="button" onclick="check(this.form)" value="Login"/> &nbsp;&nbsp;&nbsp;
+ 
+                    <input type="reset" value="Reset"/>
+                    
+                </form>
+            </div>
+        </div>
+    </main>
+    <script language="javascript">
+ 
+        var ck_username = /^[a-z0-9]+@[a-z]+\.com$/;
+        var ck_pwd = /^(?=.*\d)(?=.*[!@#$%^&])(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+        function check(form)
+ 
+             {
+ 
+                 var userid = form.userid.value;
+ 
+                 var pwd=form.pswrd.value;
+ 
+                 if (!ck_username.test(userid) || !ck_pwd.test(pwd)) 
+ 
+                    {
+ 
+                        alert("Incorrect User id/ pwd");
+ 
+                     }
+ 
+                 
+ 
+                   else
+ 
+                      {
+ 
+                        window.location.href = 'index.html';
+                        }
+ 
+               }
+ 
+            
+ 
+        
+ 
+       </script>
+</body>
+</html>
